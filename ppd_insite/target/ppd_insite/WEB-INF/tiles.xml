@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="masterDefination"
+		template="/WEB-INF/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+	<definition name="newpatient" extends="masterDefination">
+		<put-attribute name="title" value="New Patient" />
+		<put-attribute name="body" value="/WEB-INF/views/newpatient.jsp" />
+	</definition>
+	<definition name="patientreport" extends="masterDefination">
+		<put-attribute name="title" value="New Patient" />
+		<put-attribute name="body" value="/WEB-INF/views/patientreport.jsp" />
+	</definition>
+	<definition name="demo" extends="masterDefination">
+		<put-attribute name="title" value="Demo/Sample" />
+		<put-attribute name="body" value="/WEB-INF/views/demo.jsp" />
+	</definition>
+	<definition name="createshipment" extends="masterDefination">
+		<put-attribute name="title" value="createshipment Sample" />
+		<put-attribute name="body" value="/WEB-INF/views/createshipment.jsp" />
+	</definition>
+	<definition name="ordersupplies" extends="masterDefination">
+		<put-attribute name="title" value="Order Supplies" />
+		<put-attribute name="body" value="/WEB-INF/views/ordersupplies.jsp" />
+	</definition>
+
+</tiles-definitions>

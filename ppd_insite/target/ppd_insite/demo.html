@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>createshipment Sample</title>
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="/Spring4MVCHelloWorld/resources/js/html5shiv.3.7.2.min.js"></script>
+      <script src="/Spring4MVCHelloWorld/resources/js/respond.1.4.2.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="/Spring4MVCHelloWorld/resources/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/Spring4MVCHelloWorld/resources/js/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/Spring4MVCHelloWorld/resources/js/bootstrap/css/datepicker3.css">
+	<style type="text/css">
+		label.error{color:red;}
+		.nav>li>a {	padding: 10px;}
+		.nav>li.active {background-color:#eee; }
+		.navbar-brand{background-color: #fefefe;color: #AA11FC;font-size: 1.5em !important;font-style: italic;font-weight: bold;}
+	</style>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/bootstrap/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/jquery/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/jquery/additional-methods.min.js"></script>
+	<script type="text/javascript" src="/Spring4MVCHelloWorld/resources/js/bootstrap/js/jquery-validate.bootstrap-tooltip.js"></script>
+	
+	<script type="text/javascript">
+		var $fdd = $.fn.datepicker.defaults;
+		$fdd.format = "mm/dd/yyyy";//"dd/mm/yyyy";//
+		$fdd.autoclose = true;
+		$fdd.orientation="auto";
+		$.validator.setDefaults({
+			//debug: true,
+			invalidHandler : function(form, validator) {
+				//console.info(form);
+				var noofinvalids= validator.numberOfInvalids();
+				$(".error-summary",form.target).html('<div class="alert alert-error">There be '+noofinvalids+' error'+(noofinvalids>1?'s':'')+' here.</div>');
+			}
+		});
+	</script>	
+</head>
+<body>
+	
+	<!-- Docs master nav    navbar-fixed-top-->
+	<header class="navbar navbar-static-top bs-docs-nav " id="top"
+		role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button"
+				data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="glyphicon glyphicon-list"></span>
+			</button>
+			<a href="#/" class="navbar-brand">PPD - Insite</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse"
+			role="navigation">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="newpatient">New Patient</a></li>
+				<li><a href="#/returningpatient">Returning Patient</a></li>
+				<li><a href="patientreport"> Patient Report </a></li>
+				<li><a href="#/querycenter"> Query Center </a></li>
+				<li><a href="#/ordersupplies"> Order Supplies </a></li>
+				<li><a href="#/studydocuments"> Study Documents </a></li>
+				<li><a href="createshipment"> Create Shipment </a></li>
+				<li><a href="#/shipmenthistory">Shipment History </a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="logout">Logout</a></li>
+			</ul>
+		</nav>
+	</div>
+	</header>
+		
+	<div class="container-fluid">
+		createshipment<br><br>
+createshipment<br><br>
+createshipment<br><br>
+createshipment<br><br>
+	</div>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			$('.input-group.date input').prop({placeholder: $.fn.datepicker.defaults.format}).datepicker({});
+		});
+	</script>
+</body>
+</html>
